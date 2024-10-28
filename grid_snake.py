@@ -24,7 +24,7 @@ _search_dirns = [(+1, 0), (-1, 0), (0, +1), (0, -1)]
 
 def main():
     start_pos = (0, 0)
-    end_pos = (0, 3)
+    end_pos = (0, 4)
     size = (5, 5)
 
     for method in ('recursive', 'non-recursive'):
@@ -96,7 +96,7 @@ def solve_snake(start_pos: GridPt, end_pos: GridPt, size: GridPt,
         raise ValueError(f"Unknown method: {method}")
 
 
-def _recursive(pos: GridPt, end_pos: GridPt, visited: npt.NDArray[bool],
+def _recursive(pos: GridPt, end_pos: GridPt, visited: npt.NDArray[np.bool_],
                path: list[GridPt]) -> bool:
     # Initially `path` must be empty and `visited` must contain all
     # `False` values of (size[0], size[1], ...).
